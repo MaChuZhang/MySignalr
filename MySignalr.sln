@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xamarinAndroidSignalr", "xamarinAndroidSignalr\xamarinAndroidSignalr.csproj", "{68C8C8DA-702B-4595-8B4B-0B90AAE08947}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySignalr.DAL", "MySignalr.DAL\MySignalr.DAL.csproj", "{8FB5DBB4-F1E3-4611-A7C4-00DAF6B7B9AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySignalr.WebUI", "MySignalr.WebUI\MySignalr.WebUI.csproj", "{EC3A8346-6059-4562-BA5B-CFB20962C8E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,14 @@ Global
 		{68C8C8DA-702B-4595-8B4B-0B90AAE08947}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68C8C8DA-702B-4595-8B4B-0B90AAE08947}.Release|Any CPU.Build.0 = Release|Any CPU
 		{68C8C8DA-702B-4595-8B4B-0B90AAE08947}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8FB5DBB4-F1E3-4611-A7C4-00DAF6B7B9AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FB5DBB4-F1E3-4611-A7C4-00DAF6B7B9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FB5DBB4-F1E3-4611-A7C4-00DAF6B7B9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FB5DBB4-F1E3-4611-A7C4-00DAF6B7B9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3A8346-6059-4562-BA5B-CFB20962C8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3A8346-6059-4562-BA5B-CFB20962C8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3A8346-6059-4562-BA5B-CFB20962C8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3A8346-6059-4562-BA5B-CFB20962C8E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
