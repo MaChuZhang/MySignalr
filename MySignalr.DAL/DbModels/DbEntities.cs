@@ -27,7 +27,8 @@ namespace MySignalr.DAL.DbModels
     public partial class DbEntities : DbContext, IDbEntities
     {
         public DbSet<UserInfo> UserInfo { get; set; } // UserInfo
-        
+        public DbSet<UserInfo> UserInfo { get; set; } // UserInfo
+
         static DbEntities()
         {
             System.Data.Entity.Database.SetInitializer<DbEntities>(null);

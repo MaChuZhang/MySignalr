@@ -7,7 +7,8 @@ namespace MySignalr.WebUI
 {
     public class WebCookie
     {
-        private const string SubCookieName = "CN";
+        private const string SubCookieName = "cn";
+        private const int CookieExpires = 30;
         public string CookieName { get; set; }
         public HttpContextBase Context { get; set; }
         public bool ExistsCookies {

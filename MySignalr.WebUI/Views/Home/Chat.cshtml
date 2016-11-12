@@ -245,7 +245,18 @@
        /*#chat_window .window_edit {
         border-bottom:1px solid #ff0000;
         /*overflow:hidden;*/
+        div.headimg > img {
+          
+        }
+        div.contract_headimg > img {
+           filter:alpha(opacity=0.3);
+           opacity:0.3;
+        }
         
+        .online {
+           filter:alpha(opacity=1) !important;
+           opacity:1 !important;
+        }
         #chat_window .edit_type {
           height:30px;
           background-color:#f1f1f1;
@@ -389,8 +400,8 @@
         border-bottom-color:#2f9833;
         }
         .msg_fr .item_bottom_cont {
-        float:right;  
-        margin-right:25px;  
+          float:right;  
+          margin-right:25px;  
         }
         .msg_fr .cont_main {
            background-color:#2f9833;
@@ -497,8 +508,8 @@
                         <div class="contract_list_box">
                             <ul class="contract_list_ul">
                                 <li>
-                                    <div class="headimg">
-                                        <img src="~/Content/Images/headimg.jpg" class="round_img" />
+                                    <div class="contract_headimg headimg">
+                                        <img src="~/Content/Images/headimg.jpg" class="round_img online" />
                                     </div>
                                     <div class="cont">
                                         <div class="cont_top clearfix cont_box">
@@ -510,7 +521,7 @@
                                     </div>
                                 </li>
                                 <li class="li_current">
-                                    <div class="headimg">
+                                    <div class="headimg contract_headimg">
                                         <img src="~/Content/Images/headimg.jpg" class="round_img" />
                                     </div>
                                     <div class="cont">
@@ -524,7 +535,7 @@
                                     </div>
                                 </li>
                                 <li class="">
-                                    <div class="headimg">
+                                    <div class="headimg contract_headimg">
                                         <img src="~/Content/Images/headimg.jpg" class="round_img" />
                                     </div>
                                     <div class="cont">

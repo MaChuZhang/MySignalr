@@ -39,6 +39,7 @@ namespace MySignalr.WebUI
         protected void Application_AuthenticateRequest(object sender,EventArgs e)
         {
             var context = new HttpContextWrapper(HttpContext.Current);
+            //忽略
             if (context.Request.Url != null)
             {
                 var pathAndQuery = context.Request.Url.PathAndQuery.ToLower();
@@ -47,7 +48,7 @@ namespace MySignalr.WebUI
                     return;
                 }
             }
-            //忽略
+         
             var webCookies = new WebCookie();
             if (webCookies.HasLoginOn)
             {
