@@ -6,10 +6,11 @@ E:\git\MySignalr\xamarinAndroidSignalr\bin\Debug\Xamarin.Android.Support.Design.
 E:\git\MySignalr\xamarinAndroidSignalr\bin\Debug\Xamarin.Android.Support.v4.dll
 E:\git\MySignalr\xamarinAndroidSignalr\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
 E:\git\MySignalr\xamarinAndroidSignalr\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
-E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\xamarinAndroidSignalr.csprojResolveAssemblyReference.cache
 E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\xamarinAndroidSignalr.dll
 E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\xamarinAndroidSignalr.pdb
 E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\android\bin\xamarinAndroidSignalr.xamarinAndroidSignalr.apk
+E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\res\layout\loginactivity.xml
+E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\res\layout\registeractivity.xml
 E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\res\layout\main.xml
 E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\res\values\strings.xml
 E:\git\MySignalr\xamarinAndroidSignalr\obj\Debug\res\drawable\icon.png

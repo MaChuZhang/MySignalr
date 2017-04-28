@@ -5,6 +5,8 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="xamarinAndroidSignalr" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+    <activity android:icon="@drawable/icon" android:label="xamarinAndroidSignalr" android:theme="@style/MyTheme" android:name="md573ef782ff5f169b8c0916646266fbd0e.RegisterActivity" />
+    <activity android:icon="@drawable/icon" android:label="xamarinAndroidSignalr" android:theme="@style/MyTheme" android:name="md573ef782ff5f169b8c0916646266fbd0e.LoginActivity" />
     <activity android:icon="@drawable/icon" android:label="xamarinAndroidSignalr" android:theme="@style/MyTheme" android:name="md573ef782ff5f169b8c0916646266fbd0e.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
