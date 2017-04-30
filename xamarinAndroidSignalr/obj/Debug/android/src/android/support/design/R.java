@@ -2194,8 +2194,7 @@ containing a value of this type.
         public static int design_fab_background=0x7f020045;
         public static int design_snackbar_background=0x7f020046;
         public static int icon=0x7f020047;
-        public static int login_bg=0x7f020048;
-        public static int notification_template_icon_bg=0x7f020049;
+        public static int notification_template_icon_bg=0x7f020048;
     }
     public static final class id {
         public static int MyButton=0x7f060075;
