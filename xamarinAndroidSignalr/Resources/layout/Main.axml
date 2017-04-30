@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg">
+    android:background="@color/color_primary">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -52,8 +52,11 @@
         <Button
             android:id="@+id/MyButton"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
             android:layout_below="@id/passWordContainer"
+            android:background="@color/color_white"
+            android:textColor="@color/color_blank"
             android:text="@string/Hello" />
     </RelativeLayout>
 </LinearLayout>
