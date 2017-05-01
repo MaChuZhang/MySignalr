@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_below="@id/userNameContainer">
-            <EditText
+            <EditTexts
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/passWord"
@@ -55,7 +55,7 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/passWordContainer"
             android:background="@color/color_white"
-            android:textColor="@color/color_blank"
+            android:textColor="@color/color_d1d1d1"
             android:text="@string/btn_login" />
     </RelativeLayout>
     <LinearLayout
