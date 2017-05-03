@@ -41,7 +41,7 @@ namespace MySignalr.DAL.DbModels
             Property(x => x.Account).HasColumnName("Account").IsRequired().HasColumnType("nvarchar").HasMaxLength(16);
             Property(x => x.PassWord).HasColumnName("PassWord").IsRequired().HasColumnType("nvarchar").HasMaxLength(16);
             Property(x => x.AddTime).HasColumnName("AddTime").IsRequired().HasColumnType("datetime");
-            Property(x => x.AddIp).HasColumnName("AddIp").IsRequired().IsUnicode(false).HasColumnType("varchar").HasMaxLength(20);
+            Property(x => x.AddIp).HasColumnName("AddIp").IsOptional().HasColumnType("nvarchar").HasMaxLength(20);
             Property(x => x.AddDevices).HasColumnName("AddDevices").IsOptional().HasColumnType("nvarchar").HasMaxLength(20);
             InitializePartial();
         }
