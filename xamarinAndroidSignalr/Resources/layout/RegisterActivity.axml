@@ -70,7 +70,7 @@
             android:layout_marginTop="15dp"
             android:layout_below="@id/confirmPwdContainer"
             android:background="@color/color_white"
-            android:textColor="@color/color_blank"
+            android:textColor="@color/color_black"
             android:text="@string/btn_register" />
     </RelativeLayout>
     <LinearLayout

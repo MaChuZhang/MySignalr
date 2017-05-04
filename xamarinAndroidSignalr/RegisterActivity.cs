@@ -14,7 +14,7 @@ using Android.Support.V7.App;
 using Android.Support.Design.Widget;
 namespace xamarinAndroidSignalr
 {
-    [Activity(Label = "xamarinAndroidSignalr", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
+    [Activity(Label = "xamarinAndroidSignalr", MainLauncher = false, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
     public class RegisterActivity : AppCompatActivity
     {
         private TextView tv_gologin;

@@ -21,7 +21,7 @@
             android:textSize="40sp"
             android:textColor="@color/color_white" />
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/userNameContainer"
+            android:id="@+id/accountContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_loginTitle"
@@ -29,8 +29,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/userName"
-                android:inputType="textPassword"
+                android:id="@+id/account"
                 android:textColor="@color/color_d1d1d1"
                 android:hint="用户名" />
         </android.support.design.widget.TextInputLayout>
@@ -39,8 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:layout_below="@id/userNameContainer">
-            <EditTexts
+            android:layout_below="@id/accountContainer">
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/passWord"
@@ -54,8 +53,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:layout_below="@id/passWordContainer"
-            android:background="@color/color_white"
-            android:textColor="@color/color_d1d1d1"
+            android:background="@color/color_dedede"
+            android:textColor="@color/color_black"
             android:text="@string/btn_login" />
     </RelativeLayout>
     <LinearLayout

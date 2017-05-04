@@ -43,6 +43,10 @@
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\MonoAndroid10\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Common\BaseAppCompatActivity.cs" />
     <Compile Include="Common\MessageUtils.cs" />
+    <Compile Include="Common\Request\Client.cs" />
     <Compile Include="Common\StatusBarUtil.cs" />
     <Compile Include="RegisterActivity.cs" />
     <Compile Include="LoginActivity.cs" />
