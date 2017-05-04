@@ -4,4 +4,7 @@
     <string name="ApplicationName">xamarinAndroidSignalr</string>
   <string name="btn_login">登录</string>
   <string name="btn_register">注册</string>
+  <string name="str_menu_chat">聊天</string>
+  <string name="str_menu_contract">联系人</string>
+  <string name="str_menu_more">更多</string>
 </resources>

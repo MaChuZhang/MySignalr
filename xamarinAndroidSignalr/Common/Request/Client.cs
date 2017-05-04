@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -15,7 +14,7 @@ namespace xamarinAndroidSignalr
     
     internal class Client
     {
-        private const string host = "192.168.1.172:99";
+        private const string host = "192.168.0.103:99";
         private const string url = "http://"+host+"/api/{0}";
         private static RestClient GetClient(string  api)
         {
