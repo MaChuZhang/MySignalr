@@ -20,6 +20,7 @@ namespace xamarinAndroidSignalr
         private TextView tv_gologin;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+           
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.RegisterActivity);
             tv_gologin = FindViewById<TextView>(Resource.Id.tv_gologin);

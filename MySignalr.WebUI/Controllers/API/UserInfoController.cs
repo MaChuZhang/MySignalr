@@ -25,7 +25,6 @@ namespace MySignalr.WebUI.Controllers.API
                 else
                 {
                     return  ApiResult<bool>.Error("密码错误请重新登录");
-
                     //return ApiResult<bool>.Error("密码错误请重新登录");
                 }
             }

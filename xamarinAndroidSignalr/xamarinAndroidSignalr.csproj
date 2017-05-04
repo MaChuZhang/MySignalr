@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\BaseAppCompatActivity.cs" />
+    <Compile Include="Common\MessageUtils.cs" />
     <Compile Include="Common\StatusBarUtil.cs" />
     <Compile Include="RegisterActivity.cs" />
     <Compile Include="LoginActivity.cs" />
