@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools">
+  <item  android:id="@+id/tool_search"
+         android:icon="@drawable/search_white"
+         android:title="@string/tool_search"
+         app:showAsAction="never"/>
+  <item
+      android:id="@+id/tool_addAccount"
+      android:icon="@drawable/add_white"
+      android:title="@string/tool_addAccount"
+      app:showAsAction="ifRoom"/>
+  <item
+    android:id="@+id/tool_scanCode"
+    android:icon="@drawable/scan_white"
+    android:title="@string/tool_scanCode"
+    app:showAsAction="ifRoom"/>
+</menu>

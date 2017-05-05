@@ -7,4 +7,7 @@
   <string name="str_menu_chat">聊天</string>
   <string name="str_menu_contract">联系人</string>
   <string name="str_menu_more">更多</string>
+  <string name="tool_search">搜索</string>
+  <string name="tool_scanCode">扫码</string>
+  <string name="tool_addAccount">加好友</string>
 </resources>

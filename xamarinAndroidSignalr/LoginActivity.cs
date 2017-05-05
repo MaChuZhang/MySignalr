@@ -14,7 +14,7 @@ using Android.Support.V7.App;
 using Android.Support.Design.Widget;
 namespace xamarinAndroidSignalr
 {
-    [Activity(Label = "xamarinAndroidSignalr", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
+    [Activity(Label = "xamarinAndroidSignalr", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/AppTheme")]
     public class LoginActivity : AppCompatActivity
     {
         private TextView tv_goreg;
@@ -36,12 +36,11 @@ namespace xamarinAndroidSignalr
 
             btnLogin.Enabled = false;
             btnLogin.Click += btnLogin_Click;
-            tv_goreg.Click += (s, e) =>
+            tv_goreg.Click += (s,e) =>
             {
                 Intent intent = new Intent(this, typeof(RegisterActivity));
                 StartActivity(intent);
             };
-
             accountContainer.EditText.FocusChange += (s, e) =>
             {
                 if (!e.HasFocus)

@@ -10,9 +10,10 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Fragment = Android.Support.V4.App.Fragment;
 namespace xamarinAndroidSignalr
 {
-    public class ChatFragment : Fragment
+    public class ContractFragment : Fragment
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -20,13 +21,16 @@ namespace xamarinAndroidSignalr
 
             // Create your fragment here
         }
+        public ContractFragment()
+        { 
+        }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-
-            return base.OnCreateView(inflater, container, savedInstanceState);
+            View view = inflater.Inflate(Resource.Layout.Fragment_Contract,container,false);
+            return view;
         }
     }
 }
