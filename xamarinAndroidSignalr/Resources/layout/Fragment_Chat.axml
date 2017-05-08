@@ -3,9 +3,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-  <TextView
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="聊天fragment" />
+  <EditText
+    android:id="@+id/et_msg"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:textColor="@color/color_red"
+    android:background="@color/color_black"
+    />
+  <Button
+    android:id="@+id/btn_send"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:text="发送"
+    />
+  <ListView
+    android:id="@+id/lv_msg"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="聊天fragment"
     />
 </LinearLayout>

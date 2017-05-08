@@ -952,32 +952,32 @@ namespace xamarinAndroidSignalr
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b004a
-			public const int abc_background_cache_hint_selector_material_dark = 2131427402;
-			
 			// aapt resource value: 0x7f0b004b
-			public const int abc_background_cache_hint_selector_material_light = 2131427403;
+			public const int abc_background_cache_hint_selector_material_dark = 2131427403;
 			
 			// aapt resource value: 0x7f0b004c
-			public const int abc_color_highlight_material = 2131427404;
+			public const int abc_background_cache_hint_selector_material_light = 2131427404;
+			
+			// aapt resource value: 0x7f0b004d
+			public const int abc_color_highlight_material = 2131427405;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int abc_input_method_navigation_guard = 2131427328;
 			
-			// aapt resource value: 0x7f0b004d
-			public const int abc_primary_text_disable_only_material_dark = 2131427405;
-			
 			// aapt resource value: 0x7f0b004e
-			public const int abc_primary_text_disable_only_material_light = 2131427406;
+			public const int abc_primary_text_disable_only_material_dark = 2131427406;
 			
 			// aapt resource value: 0x7f0b004f
-			public const int abc_primary_text_material_dark = 2131427407;
+			public const int abc_primary_text_disable_only_material_light = 2131427407;
 			
 			// aapt resource value: 0x7f0b0050
-			public const int abc_primary_text_material_light = 2131427408;
+			public const int abc_primary_text_material_dark = 2131427408;
 			
 			// aapt resource value: 0x7f0b0051
-			public const int abc_search_url_text = 2131427409;
+			public const int abc_primary_text_material_light = 2131427409;
+			
+			// aapt resource value: 0x7f0b0052
+			public const int abc_search_url_text = 2131427410;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_search_url_text_normal = 2131427329;
@@ -988,11 +988,11 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f0b0003
 			public const int abc_search_url_text_selected = 2131427331;
 			
-			// aapt resource value: 0x7f0b0052
-			public const int abc_secondary_text_material_dark = 2131427410;
-			
 			// aapt resource value: 0x7f0b0053
-			public const int abc_secondary_text_material_light = 2131427411;
+			public const int abc_secondary_text_material_dark = 2131427411;
+			
+			// aapt resource value: 0x7f0b0054
+			public const int abc_secondary_text_material_light = 2131427412;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int accent_material_dark = 2131427332;
@@ -1036,23 +1036,26 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f0b0011
 			public const int button_material_light = 2131427345;
 			
-			// aapt resource value: 0x7f0b0049
-			public const int color_808080 = 2131427401;
-			
-			// aapt resource value: 0x7f0b0046
-			public const int color_black = 2131427398;
-			
-			// aapt resource value: 0x7f0b0048
-			public const int color_d1d1d1 = 2131427400;
+			// aapt resource value: 0x7f0b004a
+			public const int color_808080 = 2131427402;
 			
 			// aapt resource value: 0x7f0b0047
-			public const int color_d3d3d3 = 2131427399;
+			public const int color_black = 2131427399;
 			
-			// aapt resource value: 0x7f0b0045
-			public const int color_dedede = 2131427397;
+			// aapt resource value: 0x7f0b0049
+			public const int color_d1d1d1 = 2131427401;
+			
+			// aapt resource value: 0x7f0b0048
+			public const int color_d3d3d3 = 2131427400;
+			
+			// aapt resource value: 0x7f0b0046
+			public const int color_dedede = 2131427398;
 			
 			// aapt resource value: 0x7f0b0043
 			public const int color_primary = 2131427395;
+			
+			// aapt resource value: 0x7f0b0045
+			public const int color_red = 2131427397;
 			
 			// aapt resource value: 0x7f0b0044
 			public const int color_white = 2131427396;
@@ -1198,11 +1201,11 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f0b0037
 			public const int switch_thumb_disabled_material_light = 2131427383;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int switch_thumb_material_dark = 2131427412;
-			
 			// aapt resource value: 0x7f0b0055
-			public const int switch_thumb_material_light = 2131427413;
+			public const int switch_thumb_material_dark = 2131427413;
+			
+			// aapt resource value: 0x7f0b0056
+			public const int switch_thumb_material_light = 2131427414;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int switch_thumb_normal_material_dark = 2131427384;
@@ -1756,58 +1759,61 @@ namespace xamarinAndroidSignalr
 			public const int abc_textfield_search_material = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int add_white = 2130837573;
+			public const int add_actionBtn = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int design_fab_background = 2130837574;
+			public const int add_white = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int design_snackbar_background = 2130837575;
+			public const int design_fab_background = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int Icon = 2130837576;
+			public const int design_snackbar_background = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int icon_menu_chat = 2130837577;
+			public const int Icon = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int icon_menu_contract = 2130837578;
+			public const int icon_menu_chat = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int icon_menu_more = 2130837579;
+			public const int icon_menu_contract = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int iconChat_normal = 2130837580;
+			public const int icon_menu_more = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int iconChat_pressed = 2130837581;
+			public const int iconChat_normal = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int iconContract_normal = 2130837582;
+			public const int iconChat_pressed = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int iconContract_pressed = 2130837583;
+			public const int iconContract_normal = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int iconMore_normal = 2130837584;
+			public const int iconContract_pressed = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int iconMore_pressed = 2130837585;
+			public const int iconMore_normal = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int login_bg = 2130837586;
+			public const int iconMore_pressed = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int menu_textColor = 2130837587;
-			
-			// aapt resource value: 0x7f020056
-			public const int notification_template_icon_bg = 2130837590;
+			public const int login_bg = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int scan_white = 2130837588;
+			public const int menu_textColor = 2130837588;
+			
+			// aapt resource value: 0x7f020057
+			public const int notification_template_icon_bg = 2130837591;
 			
 			// aapt resource value: 0x7f020055
-			public const int search_white = 2130837589;
+			public const int scan_white = 2130837589;
+			
+			// aapt resource value: 0x7f020056
+			public const int search_white = 2130837590;
 			
 			static Drawable()
 			{
@@ -1822,14 +1828,14 @@ namespace xamarinAndroidSignalr
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060072
-			public const int account = 2131099762;
+			// aapt resource value: 0x7f060075
+			public const int account = 2131099765;
 			
-			// aapt resource value: 0x7f060071
-			public const int accountContainer = 2131099761;
+			// aapt resource value: 0x7f060074
+			public const int accountContainer = 2131099764;
 			
-			// aapt resource value: 0x7f06007e
-			public const int action0 = 2131099774;
+			// aapt resource value: 0x7f060081
+			public const int action0 = 2131099777;
 			
 			// aapt resource value: 0x7f06005a
 			public const int action_bar = 2131099738;
@@ -1855,8 +1861,8 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f06005b
 			public const int action_context_bar = 2131099739;
 			
-			// aapt resource value: 0x7f060082
-			public const int action_divider = 2131099778;
+			// aapt resource value: 0x7f060085
+			public const int action_divider = 2131099781;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -1888,17 +1894,20 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f06002a
 			public const int bottom = 2131099690;
 			
-			// aapt resource value: 0x7f060075
-			public const int btn_login = 2131099765;
+			// aapt resource value: 0x7f060078
+			public const int btn_login = 2131099768;
 			
-			// aapt resource value: 0x7f060092
-			public const int btn_register = 2131099794;
+			// aapt resource value: 0x7f060095
+			public const int btn_register = 2131099797;
+			
+			// aapt resource value: 0x7f060071
+			public const int btn_send = 2131099761;
 			
 			// aapt resource value: 0x7f060044
 			public const int buttonPanel = 2131099716;
 			
-			// aapt resource value: 0x7f06007f
-			public const int cancel_action = 2131099775;
+			// aapt resource value: 0x7f060082
+			public const int cancel_action = 2131099778;
 			
 			// aapt resource value: 0x7f06002b
 			public const int center = 2131099691;
@@ -1912,8 +1921,8 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f060052
 			public const int checkbox = 2131099730;
 			
-			// aapt resource value: 0x7f060085
-			public const int chronometer = 2131099781;
+			// aapt resource value: 0x7f060088
+			public const int chronometer = 2131099784;
 			
 			// aapt resource value: 0x7f060033
 			public const int clip_horizontal = 2131099699;
@@ -1924,11 +1933,11 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f06001e
 			public const int collapseActionView = 2131099678;
 			
-			// aapt resource value: 0x7f060091
-			public const int confirmPwd = 2131099793;
+			// aapt resource value: 0x7f060094
+			public const int confirmPwd = 2131099796;
 			
-			// aapt resource value: 0x7f060090
-			public const int confirmPwdContainer = 2131099792;
+			// aapt resource value: 0x7f060093
+			public const int confirmPwdContainer = 2131099795;
 			
 			// aapt resource value: 0x7f06004a
 			public const int contentPanel = 2131099722;
@@ -1966,14 +1975,17 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f06001b
 			public const int end = 2131099675;
 			
-			// aapt resource value: 0x7f06008a
-			public const int end_padder = 2131099786;
+			// aapt resource value: 0x7f06008d
+			public const int end_padder = 2131099789;
 			
 			// aapt resource value: 0x7f060023
 			public const int enterAlways = 2131099683;
 			
 			// aapt resource value: 0x7f060024
 			public const int enterAlwaysCollapsed = 2131099684;
+			
+			// aapt resource value: 0x7f060070
+			public const int et_msg = 2131099760;
 			
 			// aapt resource value: 0x7f060025
 			public const int exitUntilCollapsed = 2131099685;
@@ -2011,8 +2023,8 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f06003f
 			public const int image = 2131099711;
 			
-			// aapt resource value: 0x7f060089
-			public const int info = 2131099785;
+			// aapt resource value: 0x7f06008c
+			public const int info = 2131099788;
 			
 			// aapt resource value: 0x7f060000
 			public const int item_touch_helper_previous_elevation = 2131099648;
@@ -2020,11 +2032,11 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f06002f
 			public const int left = 2131099695;
 			
-			// aapt resource value: 0x7f060083
-			public const int line1 = 2131099779;
+			// aapt resource value: 0x7f060086
+			public const int line1 = 2131099782;
 			
-			// aapt resource value: 0x7f060087
-			public const int line3 = 2131099783;
+			// aapt resource value: 0x7f06008a
+			public const int line3 = 2131099786;
 			
 			// aapt resource value: 0x7f06000b
 			public const int listMode = 2131099659;
@@ -2032,11 +2044,14 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f060041
 			public const int list_item = 2131099713;
 			
-			// aapt resource value: 0x7f060081
-			public const int media_actions = 2131099777;
+			// aapt resource value: 0x7f060072
+			public const int lv_msg = 2131099762;
 			
-			// aapt resource value: 0x7f060078
-			public const int menu_bar = 2131099768;
+			// aapt resource value: 0x7f060084
+			public const int media_actions = 2131099780;
+			
+			// aapt resource value: 0x7f06007b
+			public const int menu_bar = 2131099771;
 			
 			// aapt resource value: 0x7f06001c
 			public const int middle = 2131099676;
@@ -2065,17 +2080,17 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f060046
 			public const int parentPanel = 2131099718;
 			
-			// aapt resource value: 0x7f060074
-			public const int passWord = 2131099764;
+			// aapt resource value: 0x7f060077
+			public const int passWord = 2131099767;
 			
-			// aapt resource value: 0x7f060073
-			public const int passWordContainer = 2131099763;
+			// aapt resource value: 0x7f060076
+			public const int passWordContainer = 2131099766;
 			
-			// aapt resource value: 0x7f06008e
-			public const int passWordContainerRe = 2131099790;
+			// aapt resource value: 0x7f060091
+			public const int passWordContainerRe = 2131099793;
 			
-			// aapt resource value: 0x7f06008f
-			public const int passWordRe = 2131099791;
+			// aapt resource value: 0x7f060092
+			public const int passWordRe = 2131099794;
 			
 			// aapt resource value: 0x7f060029
 			public const int pin = 2131099689;
@@ -2182,8 +2197,8 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f060031
 			public const int start = 2131099697;
 			
-			// aapt resource value: 0x7f060080
-			public const int status_bar_latest_event_content = 2131099776;
+			// aapt resource value: 0x7f060083
+			public const int status_bar_latest_event_content = 2131099779;
 			
 			// aapt resource value: 0x7f060065
 			public const int submit_area = 2131099749;
@@ -2191,17 +2206,17 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f06000d
 			public const int tabMode = 2131099661;
 			
-			// aapt resource value: 0x7f060088
-			public const int text = 2131099784;
+			// aapt resource value: 0x7f06008b
+			public const int text = 2131099787;
 			
-			// aapt resource value: 0x7f060086
-			public const int text2 = 2131099782;
+			// aapt resource value: 0x7f060089
+			public const int text2 = 2131099785;
 			
 			// aapt resource value: 0x7f06004d
 			public const int textSpacerNoButtons = 2131099725;
 			
-			// aapt resource value: 0x7f060084
-			public const int time = 2131099780;
+			// aapt resource value: 0x7f060087
+			public const int time = 2131099783;
 			
 			// aapt resource value: 0x7f060043
 			public const int title = 2131099715;
@@ -2209,17 +2224,17 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f060048
 			public const int title_template = 2131099720;
 			
-			// aapt resource value: 0x7f060077
-			public const int toolBar = 2131099767;
+			// aapt resource value: 0x7f06007a
+			public const int toolBar = 2131099770;
 			
-			// aapt resource value: 0x7f060095
-			public const int tool_addAccount = 2131099797;
+			// aapt resource value: 0x7f060098
+			public const int tool_addAccount = 2131099800;
 			
-			// aapt resource value: 0x7f060096
-			public const int tool_scanCode = 2131099798;
+			// aapt resource value: 0x7f060099
+			public const int tool_scanCode = 2131099801;
 			
-			// aapt resource value: 0x7f060094
-			public const int tool_search = 2131099796;
+			// aapt resource value: 0x7f060097
+			public const int tool_search = 2131099799;
 			
 			// aapt resource value: 0x7f060032
 			public const int top = 2131099698;
@@ -2227,26 +2242,26 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f060047
 			public const int topPanel = 2131099719;
 			
+			// aapt resource value: 0x7f06007c
+			public const int tv_chat = 2131099772;
+			
+			// aapt resource value: 0x7f06007d
+			public const int tv_contract = 2131099773;
+			
+			// aapt resource value: 0x7f060096
+			public const int tv_gologin = 2131099798;
+			
 			// aapt resource value: 0x7f060079
-			public const int tv_chat = 2131099769;
+			public const int tv_goreg = 2131099769;
 			
-			// aapt resource value: 0x7f06007a
-			public const int tv_contract = 2131099770;
+			// aapt resource value: 0x7f060073
+			public const int tv_loginTitle = 2131099763;
 			
-			// aapt resource value: 0x7f060093
-			public const int tv_gologin = 2131099795;
+			// aapt resource value: 0x7f06007e
+			public const int tv_more = 2131099774;
 			
-			// aapt resource value: 0x7f060076
-			public const int tv_goreg = 2131099766;
-			
-			// aapt resource value: 0x7f060070
-			public const int tv_loginTitle = 2131099760;
-			
-			// aapt resource value: 0x7f06007b
-			public const int tv_more = 2131099771;
-			
-			// aapt resource value: 0x7f06008b
-			public const int tv_registerTitle = 2131099787;
+			// aapt resource value: 0x7f06008e
+			public const int tv_registerTitle = 2131099790;
 			
 			// aapt resource value: 0x7f060009
 			public const int up = 2131099657;
@@ -2254,17 +2269,17 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f060014
 			public const int useLogo = 2131099668;
 			
-			// aapt resource value: 0x7f06008c
-			public const int userNameContainerRe = 2131099788;
+			// aapt resource value: 0x7f06008f
+			public const int userNameContainerRe = 2131099791;
 			
-			// aapt resource value: 0x7f06008d
-			public const int userNameRe = 2131099789;
+			// aapt resource value: 0x7f060090
+			public const int userNameRe = 2131099792;
 			
-			// aapt resource value: 0x7f06007c
-			public const int viewLine = 2131099772;
+			// aapt resource value: 0x7f06007f
+			public const int viewLine = 2131099775;
 			
-			// aapt resource value: 0x7f06007d
-			public const int viewPager = 2131099773;
+			// aapt resource value: 0x7f060080
+			public const int viewPager = 2131099776;
 			
 			// aapt resource value: 0x7f06000a
 			public const int view_offset_helper = 2131099658;
@@ -2619,6 +2634,9 @@ namespace xamarinAndroidSignalr
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f090148
+			public const int ActionButton_Overflow_Custom = 2131296584;
+			
 			// aapt resource value: 0x7f09007d
 			public const int AlertDialog_AppCompat = 2131296381;
 			
@@ -2631,11 +2649,11 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f090080
 			public const int Animation_AppCompat_DropDownUp = 2131296384;
 			
-			// aapt resource value: 0x7f090146
-			public const int AppTheme = 2131296582;
+			// aapt resource value: 0x7f090145
+			public const int AppTheme = 2131296581;
 			
-			// aapt resource value: 0x7f090147
-			public const int AppTheme_Base = 2131296583;
+			// aapt resource value: 0x7f090146
+			public const int AppTheme_Base = 2131296582;
 			
 			// aapt resource value: 0x7f090081
 			public const int Base_AlertDialog_AppCompat = 2131296385;
@@ -3060,8 +3078,8 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f090134
 			public const int Base_Widget_Design_TabLayout = 2131296564;
 			
-			// aapt resource value: 0x7f090144
-			public const int OverflowMenuStyle = 2131296580;
+			// aapt resource value: 0x7f090147
+			public const int OverflowMenuStyle = 2131296583;
 			
 			// aapt resource value: 0x7f090010
 			public const int Platform_AppCompat = 2131296272;
@@ -3369,8 +3387,8 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f0900ee
 			public const int ThemeOverlay_AppCompat_Light = 2131296494;
 			
-			// aapt resource value: 0x7f090145
-			public const int ToolBarTheme = 2131296581;
+			// aapt resource value: 0x7f090144
+			public const int ToolBarTheme = 2131296580;
 			
 			// aapt resource value: 0x7f0900ef
 			public const int Widget_AppCompat_ActionBar = 2131296495;
@@ -3603,8 +3621,8 @@ namespace xamarinAndroidSignalr
 			// aapt resource value: 0x7f090143
 			public const int Widget_Design_TextInputLayout = 2131296579;
 			
-			// aapt resource value: 0x7f090148
-			public const int menu_item = 2131296584;
+			// aapt resource value: 0x7f090149
+			public const int menu_item = 2131296585;
 			
 			static Style()
 			{

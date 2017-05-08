@@ -5,15 +5,15 @@
   <item  android:id="@+id/tool_search"
          android:icon="@drawable/search_white"
          android:title="@string/tool_search"
-         app:showAsAction="never"/>
+         app:showAsAction="always"/>
   <item
       android:id="@+id/tool_addAccount"
       android:icon="@drawable/add_white"
       android:title="@string/tool_addAccount"
-      app:showAsAction="ifRoom"/>
+      app:showAsAction="never|withText"/>
   <item
     android:id="@+id/tool_scanCode"
     android:icon="@drawable/scan_white"
     android:title="@string/tool_scanCode"
-    app:showAsAction="ifRoom"/>
+    app:showAsAction="never|withText"/>
 </menu>

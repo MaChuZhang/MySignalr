@@ -13,7 +13,7 @@ using Android.Support.Design.Widget;
 using ToolBar = Android.Support.V7.Widget.Toolbar;
 namespace xamarinAndroidSignalr
 {
-    [Activity(Label = "xamarinAndroidSignalr", MainLauncher = false, Icon = "@drawable/icon",Theme = "@style/AppTheme")]
+    [Activity(Label = "xamarinAndroidSignalr", MainLauncher = true, Icon = "@drawable/icon",Theme = "@style/AppTheme")]
     public class MainActivity : AppCompatActivity
     {
         //fragment 页面常量
@@ -31,7 +31,7 @@ namespace xamarinAndroidSignalr
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             StatusBarUtil.ColorStatusBar(this,Resources.GetColor(Resource.Color.color_primary));
-            mAdapter = new MainFragmentPagerAdapter(SupportFragmentManager);
+            mAdapter = new MainFragmentPagerAdapter(SupportFragmentManager,this);
             bindViews();
         }
 
@@ -39,7 +39,7 @@ namespace xamarinAndroidSignalr
         {
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolBar);
             toolbar.SetLogo(Resource.Drawable.Icon);
-            toolbar.InflateMenu(Resource.Menu.chatToolMenu);
+           // toolbar.InflateMenu(Resource.Menu.chatToolMenu);
             SetSupportActionBar(toolbar);
             
             tv_chat = FindViewById<TextView>(Resource.Id.tv_chat);
@@ -126,6 +126,29 @@ namespace xamarinAndroidSignalr
                         break;
                 }
             }
+        }
+        public override bool OnMenuOpened(int featureId, IMenu menu)
+        {
+            System.Diagnostics.Debug.WriteLine(featureId);
+            if (menu != null)
+            {
+                var javaObj = (Java.Lang.Object)menu;
+                var javaClass = javaObj.Class;
+                if (javaClass.SimpleName.EndsWith("MenuBuilder"))
+                {
+                    try
+                    {
+                        Java.Lang.Reflect.Method m = javaClass.GetDeclaredMethod("setOptionalIconsVisible", new Java.Lang.Class[] { Java.Lang.Boolean.Type });
+                        m.Accessible = true;
+                        m.Invoke(javaObj, new Java.Lang.Object[] { true });
+                    }
+                    catch (Java.Lang.NoSuchFieldException e)
+                    {
+                        System.Console.WriteLine("onMenuOpened:{0}", e.ToString());
+                    }
+                }
+            }
+            return base.OnMenuOpened(featureId, menu);
         }
     }
     //public  override void OnOageScrollStateChange

@@ -41,6 +41,9 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Client">
+      <HintPath>..\..\..\Demo\TranSport\mingzhe\Components\signalr-2.1.2.2\lib\android\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -71,8 +74,10 @@
   <ItemGroup>
     <Compile Include="Adapters\MainFragmentPagerAdapter.cs" />
     <Compile Include="Common\BaseAppCompatActivity.cs" />
+    <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\MessageUtils.cs" />
     <Compile Include="Common\Request\Client.cs" />
+    <Compile Include="Common\SignalRChatClient.cs" />
     <Compile Include="Common\StatusBarUtil.cs" />
     <Compile Include="Fragments\MoreFragment.cs" />
     <Compile Include="Fragments\ContractFragment.cs" />
@@ -170,6 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xhdpi\add_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\add_actionBtn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

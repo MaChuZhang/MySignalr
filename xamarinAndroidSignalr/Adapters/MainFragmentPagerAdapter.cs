@@ -22,9 +22,9 @@ namespace xamarinAndroidSignalr
         private ChatFragment chatFragment = null;
         private ContractFragment contractFragment = null;
         private MoreFragment moreFragment = null;
-        public MainFragmentPagerAdapter(FragmentManager fm):base(fm)
+        public MainFragmentPagerAdapter(FragmentManager fm,Context _context):base(fm)
         {
-            chatFragment = new ChatFragment();
+            chatFragment = new ChatFragment(_context);
             contractFragment = new ContractFragment();
             moreFragment = new MoreFragment();
         }

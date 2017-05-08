@@ -13,6 +13,7 @@ namespace MySignalr.WebUI
     {
         protected void Application_Start()
         {
+            //RouteTable.Routes.MapHubs();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             
             AreaRegistration.RegisterAllAreas();

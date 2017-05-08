@@ -18,12 +18,6 @@
       android:contentInsetLeft="0dp"
       toolbar:paddingStart ="50dp"
       android:layout_alignParentTop="true">
-    <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Clock">
-      
-    </TextView>
   </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:id="@+id/menu_bar"
