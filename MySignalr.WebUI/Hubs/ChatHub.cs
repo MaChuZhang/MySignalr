@@ -4,21 +4,23 @@ using System.Linq;
 using System.Web;
 using Microsoft.AspNet.SignalR;
 using Microsoft.AspNet.SignalR.Hubs;
-
+using System.Threading.Tasks;
 namespace MySignalr.WebUI.Hubs
 {
-    [HubName("chatHub")]
-    public class ChatHub : Hub
+    [HubName("serverHub")]
+    public class ServerHub : Hub
     {
-        [HubMethodName("hello")]
-        public void Hello()
+        [HubMethodName("sendMsg")]
+        public void SendMsg(string platform, string message)
         {
+            //为客户端注册sendMessage方法
+            Clients.All.sendMessage(platform, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ":" + message);
             Clients.All.hello();
         }
-        [HubMethodName("sendMsg")]
-        public void SendMsg(string  message)
+        public override Task OnConnected()
         {
-            Clients.All.sendMessage(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),message);
+            Console.WriteLine("已连接");
+            return base.OnConnected();
         }
     }
 }

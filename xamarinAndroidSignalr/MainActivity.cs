@@ -11,11 +11,14 @@ using Android.Support.V4.App;
 using Android.Support.V4.View;
 using Android.Support.Design.Widget;
 using ToolBar = Android.Support.V7.Widget.Toolbar;
+using xamarinAndroidSignalr.Common;
+using System.Threading.Tasks;
 namespace xamarinAndroidSignalr
 {
     [Activity(Label = "xamarinAndroidSignalr", MainLauncher = true, Icon = "@drawable/icon",Theme = "@style/AppTheme")]
     public class MainActivity : AppCompatActivity
     {
+        #region object
         //fragment 页面常量
         internal const int PAGE_CHAT = 0;
         internal const int PAGE_CONTRACT = 1;
@@ -26,7 +29,8 @@ namespace xamarinAndroidSignalr
         private TextView tv_more;
         private TextView tv_contract;
         private MainFragmentPagerAdapter mAdapter;
-        protected override void OnCreate(Bundle bundle)
+        #endregion
+        protected  override async void  OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);

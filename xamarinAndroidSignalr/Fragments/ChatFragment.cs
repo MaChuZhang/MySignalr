@@ -17,26 +17,26 @@ namespace xamarinAndroidSignalr
 {
     public class ChatFragment : Fragment
     {
+        #region Object 
         private Button btn_send;
         private EditText et_msg;
         private ListView lv_msg;
         private Context context;
         private SignalRChatClient client;
-        public override async void OnCreate(Bundle savedInstanceState)
+        #endregion
+
+        public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-             client = new SignalRChatClient();
-            await client.Connect();
             // Create your fragment here
         }
         public ChatFragment(Context  _context)
         {
-
             //this.Context = context;
             context =_context;
         }
 
-        public    override  View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        public    override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
             // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
@@ -44,16 +44,21 @@ namespace xamarinAndroidSignalr
             btn_send = view.FindViewById<Button>(Resource.Id.btn_send);
             et_msg =  view.FindViewById<EditText>(Resource.Id.et_msg);
             ListView lv_msg = view.FindViewById<ListView>(Resource.Id.lv_msg);
-           
             var adapter = new ArrayAdapter(context, Android.Resource.Layout.SimpleListItem1);
-            string msg = et_msg.Text;
+            string msg = et_msg.Text.ToString();
+
+            System.Diagnostics.Debug.WriteLine(msg);
+
+            client = new SignalRChatClient();
+            client.Connect();
             //发送消息
             btn_send.Click += delegate
             {
-                client.Send(msg);
+                client.Send(Build.Model,et_msg.Text.ToString());
                 et_msg.Text = string.Empty;
             };
             lv_msg.Adapter = adapter;
+
             //使用委托接受消息
             client.OnReceiveEvent += (sender, message) => Activity.RunOnUiThread(() =>
             {

@@ -9,38 +9,182 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Chat</title>
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Css/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <style type="text/css">
+        *{
+        padding:0px;margin:0px;
+        }
+        html,body{
+            height:100%;
+        }
+        #chat_main{
+            height: 100%;
+            width: 100%;
+            position:relative;
+            backface-visibility:hidden;
+            background:url('../../Content/Images/body_bg.jpg') repeat;
+            padding-top:50px;
+        }
+        .clearfix {
+        zoom:1;
+        }
+        .clearfix:before,.clearfix:after {
+           display:table;line-height:0;content:"";
+        }
+        .clearfix:after {clear:both}
+        .round_img{border-radius:50% 50% 50% 50%;height:100%;}
+        .a_txt_link {color:#d2d2d2;font-size:11px;}
+            .a_txt_link:hover {color:#f1f1f1}
+       #chat_main .chat_container {width:1040px;margin:0px auto;background-color:#fbfbfb;height:600px;}
+       #chat_main .chat_container #contract_panel {height:600px;width:260px;background-color:#292b2e;float:right;}
+       #chat_main .chat_container #contract_panel .account_box{height:70px;padding:10px;    border-bottom: 1px #404247 solid;}
+        #chat_main .chat_container #contract_panel .account_box dl {display:inline;height:100%}
+        dt.account_img {height:100%;display:inline-block;float:left;margin-right:10px;}
+        #chat_main .chat_container #contract_panel .account_box dl dd{height:50%;vertical-align:middle;line-height:35px;color:#fff}
+        .search_box {height:40px;background-color:#33353A;line-height:35px;padding-left:20px;}
+        a#btn_search {color: #d2d2d2;font-size: 14px;cursor: pointer;}
+        a#btn_search:hover{
+           font-size:15px;
+           color:#f1f1f1;
+        }
+        input.input_contract {
+          border:none;
+          outline-style:none;
+         background-color:#33353A;
+        }
+        div.contract_list_box ul#contract_list_ul {
+        background-color:#33353A;
+        }
+        div.contract_list_box ul#contract_list_ul li{
+          border-top: 1px #404247 solid;
+          cursor:pointer;
+        }
+            div.contract_list_box ul#contract_list_ul li div.headimg {
+              height:60px;width:60px;margin:15px;display:inline-block;
+            }
+            
+            div.contract_list_box ul#contract_list_ul li div.cont {
+              display:inline-block;
+              width:150px;
+             margin-top:15px;
+             margin-bottom:15px;
+             margin-right:15px;
+             height:60px;
+             float:right;
+            }
+            div.contract_list_box ul#contract_list_ul li div.cont div.cont_box {
+              height:50%;
+               line-height:30px;
+            }
+                div.contract_list_box ul#contract_list_ul li div.cont  h6.name{
+                color:#fff;
+                display:inline;
+            }
+            div.contract_list_box ul#contract_list_ul li div.cont span.time{
+                float: right;
+            }
+                .font_s_dark{
+                 font-size:12px;
+                 color:#d2d2d2;
+                }
+    </style>
 </head>
 <body>
-    <div class="container">
-          <input  type="text" id="message"/>
-          <input  type="button" id="sendmessage" value="send"/>
-          <input type="hidden" id="displayName"/>
-          <ul id="messageBox"></ul>
+    <div id="chat_main">
+        @*<div class="container">
+            <input type="text" id="message" />
+            <button type="button" id="sendMessage" value="Send">Send</button>
+            <ul id="messageBox"></ul>
+        </div>*@
+        <div class="chat_container">
+            <div id="contract_panel">
+                <div class="account_box">
+                    <dl>
+                        <dt class="account_img"><img src="~/Content/Images/headimg.jpg" class="round_img" /></dt>
+                        <dd><h4>12457878</h4></dd>
+                        <dd><a href="javascript:void(0)" class="a_txt_link">更多信息</a></dd>
+                    </dl>
+                </div>
+                <div class="search_box">
+                   <a id="btn_search"><span class="fa fa-search"></span></a>
+                    <input type="text" placeholder="查找联系人和群" class="input_contract font_s_dark"/>
+                </div>
+
+                <div class="contract_list_box">
+                      <ul id="contract_list_ul">
+                          <li>
+                              <div class="headimg">
+                                  <img src="~/Content/Images/headimg.jpg" class="round_img" />
+                              </div>
+                              <div class="cont">
+                                  <div class="cont_top clearfix cont_box">
+                                      <h6 class="name">科比布莱恩特</h6>
+                                      <span class="time font_s_dark"><i class="fa fa-times"></i>14:58</span>
+                                  </div>
+                                  <div class="cont_bottom cont_box">
+                                    <span class="font_s_dark">最新消息</span>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                </div>
+            </div>
+            <div id="chat_panel">
+
+            </div>
+        </div>
     </div>
     <script src="~/Scripts/jquery-2.0.3.js"></script>
     <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
     <script src="~/signalr/hubs"></script>  
     <script>
-        $(function () {
-            //引用自动生成的集线器代理
-            var chat = $.connection.chatHub;
-            //定义服务器调用的客户端sendMessage显示消息
-            chat.client.sendMessage = function (name, message) {
-                debugger
-                $("#messageBox").append('<li><strong style="color:green">' + name + '</strong>:' + message + '</li>');
-            }
-  
-        $("#message").focus();
-        //开始链接服务器
-        $.connection.hub.start().done(function () {
-            $('#sendmessage').click(function () {
-                debugger
-                chat.server.sendMsg($("#message").val());
-                $('#message').val('').focus();
+    function getExplorerInfo() {
+        var explorer = window.navigator.userAgent.toLowerCase();
+        //ie
+        if (explorer.indexOf("msie") >= 0) {
+            var ver = explorer.match(/msie ([\d.]+)/)[1];
+            return { type: "IE", version: ver };
+        }
+        //firefox
+        else if (explorer.indexOf("firefox") >= 0) {
+            var ver = explorer.match(/firefox\/([\d.]+)/)[1];
+            return { type: "Firefox", version: ver };
+        }
+        //Chrome
+        else if (explorer.indexOf("chrome") >= 0) {
+            var ver = explorer.match(/chrome\/([\d.]+)/)[1];
+            return { type: "Chrome", version: ver };
+        }
+        //Opera
+        else if (explorer.indexOf("opera") >= 0) {
+            var ver = explorer.match(/opera.([\d.]+)/)[1];
+            return { type: "Opera", version: ver };
+        }
+            //Safari
+        else if (explorer.indexOf("Safari") >= 0) {
+            var ver = explorer.match(/version\/([\d.]+)/)[1];
+            return { type: "Safari", version: ver };
+        }
+    }
+    $(function () {
+        //debugger
+        //引用生成的集线器代理
+        var chat = $.connection.serverHub;
+        //注册服务器端已经定义的客户端方法sendMessage来显示消息
+        chat.client.sendMessage = function (name,message)
+        {
+            //向页面添加消息
+            $("#messageBox").append('<li><strong style="color:green">' + name + '</strong>-' + message + '</li>');
+        }
+        //开始连接服务器
+        $.connection.hub.start().done(function (){
+            $("#sendMessage").click(function (){
+                //调用服务器中定义的方法
+                chat.server.sendMsg(getExplorerInfo().type,$("#message").val());
+                $("#message").val('').focus();
             });
-          })
-        })
+        });
+    })
     </script>
 </body>
 </html>
