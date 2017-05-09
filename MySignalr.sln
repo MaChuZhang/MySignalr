@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySignalr.DAL", "MySignalr.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySignalr.WebUI", "MySignalr.WebUI\MySignalr.WebUI.csproj", "{EC3A8346-6059-4562-BA5B-CFB20962C8E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalrClientDemo", "C:\Users\zhanglin\Downloads\Xamarin android Signalr的简单例子\Xamarin android Signalr的简单例子\SignalrClientDemo\SignalrClientDemo.csproj", "{B8D6FF3F-4DB5-489D-BD4F-7641B731F67F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalrEasyDemo", "..\..\学习示例\Xamarin_Demo\MainControlerLogin_Demo\SignalrEasyDemo\SignalrEasyDemo.csproj", "{DF03147A-7E37-4784-B4BA-F83EC90B46D4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,16 +29,6 @@ Global
 		{EC3A8346-6059-4562-BA5B-CFB20962C8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC3A8346-6059-4562-BA5B-CFB20962C8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC3A8346-6059-4562-BA5B-CFB20962C8E6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8D6FF3F-4DB5-489D-BD4F-7641B731F67F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8D6FF3F-4DB5-489D-BD4F-7641B731F67F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8D6FF3F-4DB5-489D-BD4F-7641B731F67F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{B8D6FF3F-4DB5-489D-BD4F-7641B731F67F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8D6FF3F-4DB5-489D-BD4F-7641B731F67F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B8D6FF3F-4DB5-489D-BD4F-7641B731F67F}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{DF03147A-7E37-4784-B4BA-F83EC90B46D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DF03147A-7E37-4784-B4BA-F83EC90B46D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DF03147A-7E37-4784-B4BA-F83EC90B46D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DF03147A-7E37-4784-B4BA-F83EC90B46D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
