@@ -18,7 +18,7 @@
         padding:0px;margin:0px;
         }
         html,body{
-            height:100%;
+            height:100%;            
         }
         #chat_main{
             height: 100%;
@@ -41,9 +41,9 @@
         .round_img{border-radius:50% 50% 50% 50%;height:100%;}
         .a_txt_link {color:#d2d2d2;font-size:11px;}
         .a_txt_link:hover{color:#f1f1f1}
-       #chat_main .chat_container {width:1040px;margin:0px auto;background-color:#fbfbfb;height:600px;}
-       #chat_main .chat_container #contract_panel {height:600px;width:260px;background-color:#292b2e;float:right;}
-       #chat_main .chat_container #contract_panel .account_box{height:70px;padding:10px;    border-bottom: 1px #404247 solid;}
+       #chat_main .chat_container {width:1040px;margin:0px auto;background-color:#fbfbfb;height:700px;}
+       #chat_main .chat_container #contract_panel {height:700px;width:260px;background-color:#404247;float:right;position:relative;overflow:hidden}
+       #chat_main .chat_container #contract_panel .account_box{height:70px;padding:10px;    border-bottom: 1px #404247 solid;background-color: #292b2e;}
         #chat_main .chat_container #contract_panel .account_box dl {display:inline;height:100%}
         dt.account_img {height:100%;display:inline-block;float:left;margin-right:10px;}
         #chat_main .chat_container #contract_panel .account_box dl dd{height:50%;vertical-align:middle;line-height:35px;color:#fff}
@@ -62,7 +62,8 @@
         background-color:#33353A;
         }
         li.li_current {
-        background-color:#292b2e;
+           background-color:#292b2e;
+           border-right:2px solid #2f9833;
         }
 
         div.contract_list_box ul.contract_list_ul li{
@@ -97,14 +98,14 @@
                  font-size:10px;
                  color:#d2d2d2;
                 }
-        .fl {
+        .fl{
             float:left;
         }
-        /*tab 切换*/
+        /*tab 切换 start*/
         div.tab_switch {
-        /*margin-bottom:20px;*/
-        margin-top:10px;
-        margin-bottom:10px;
+            background-color: #292b2e;
+        padding-bottom:15px;
+        padding-top:15px;
         }
         ul#tab_ul {
          border-bottom:1px #404247 solid;
@@ -149,8 +150,8 @@
           margin: 4px 0px 0px -21px;
           border-color: transparent transparent #292b2e;
           border-width:8px;
-        display: inline-block;
-    width: 0px;
+         display: inline-block;
+         width: 0px;
        height: 0px;
         font-size: 0px;
         line-height: 0;
@@ -161,10 +162,11 @@
         #tab_content {
         overflow:hidden;
         }
+        /*tab 切换end*/
         #tab_content div.tab_fragment{
         
         }
-        
+        /*qq群联系人 start*/
         ul#qun_list{
             background-color: #33353A;
         }
@@ -180,15 +182,146 @@
         ul#qun_list .font_cw{
           color:#fff;
         }
+        /*qq群联系人 start*/
+        /*操作栏 start*/
+        #contract_panel #operate_box {
+          position:absolute;
+          background-color:#292b2e;
+          height:28px;width:100%;
+          bottom:0px;
+        }
+        #operate_box ul li {
+            margin-top:4px;
+            margin-left:15px;
+        }
+        #operate_box ul li>a{
+            height:20px;
+            width:20px;
+            display:block;
+             cursor:pointer;
+        }
+            #operate_box ul li a.a_sound_open {
+              background-image: url('../../Content/Images/sound_open.png');
+              background-repeat:no-repeat;
+            }
+            #operate_box ul li a.a_sound_close{
+              background-image: url('../../Content/Images/sound_close.png');
+              background-repeat:no-repeat;
+            }
+            #operate_box ul li a.a_edit{
+              background-image: url('../../Content/Images/exit.png');
+              background-repeat:no-repeat;
+            }
+        /*操作栏 end*/
+        #chat_panel {
+           height:700px;
+           width:780px;
+           /*overflow:hidden;*/
+           float:right; 
+           box-shadow:0 0 10px #808080;
+        }
+        /*chat window start*/
+         #chat_panel #chat_window {
+          height:100%;
+          width:100%;
+         }
+        #chat_window .window_head {
+        height:60px;
+        border-bottom:1px solid #f0f0f0;
+        line-height:60px;
+        }
+        #chat_window .window_head img {
+           height:40px;
+           width:40px;
+           margin-left:10px;
+           margin-top:10px;
+           margin-right:20px;
+        }
+        #chat_window .window_msg {
+        height:450px;
+        border-bottom:1px solid #f0f0f0;
+        }
+       #chat_window .window_edit {
+        border-bottom:1px solid #ff0000;
+        /*overflow:hidden;*/
+        }
+        #chat_window .edit_type {
+          height:30px;
+          background-color:#f1f1f1;
+          line-height:30px;
+        }
+        #chat_window .edit_cont {
+        }
+        #chat_window  #edit_div{
+            padding:5px;
+            outline-style:none;
+          height:110px;
+        }
+        #chat_window .btn_box {
+          background-color:#f1f1f1;
+          height:38px;
+        }
+            #chat_window .btn_box>div.fr{
+            margin-right:50px;
+            }
+        #chat_window .btn_box>div.fr button#send{
+              background-color:#2f9833;
+              padding:6px 12px;
+              color:#fff;
+              border-top-left-radius:4px;
+              border-bottom-left-radius:4px;
+              cursor:pointer;
+              display:inline-block;
+              font-size:12px;
+              margin-top:7px;
+              border:none;
+            }
+        span#send_arrow {
+          margin-top:7px;
+          display:inline-block;
+          margin-right:50px;
+          color:#fff;
+          background-color:#2f9833;
+          padding:6px 10px;
+          position:absolute;
+          top:0;
+          left:49px;
+          cursor:pointer;
+          border-top-right-radius:4px;
+          border-bottom-right-radius:4px;
+        }
+        .position_re {
+          position:relative;        
+        }
+        .h_opacity:hover {
+          filter:alpha(opacity=0.8);
+          opacity:0.8;
+        }
+        ul#msg_info {
+        position:absolute;
+        width:200px;
+        bottom:-50px;
+        left:50px;
+        background-color:#f1f1f1;
+        cursor:pointer;
+        }
+            ul#msg_info li {
+             padding:3px 5px;
+             font-size:12px;
+            }
+                ul#msg_info li:hover {
+                background-color:#2f9833;
+                color:#fff;
+                }
     </style>
 </head>
 <body>
     <div id="chat_main">
         @*<div class="container">
-            <input type="text" id="message" />
-            <button type="button" id="sendMessage" value="Send">Send</button>
-            <ul id="messageBox"></ul>
-        </div>*@
+                <input type="text" id="message" />
+                <button type="button" id="sendMessage" value="Send">Send</button>
+                <ul id="messageBox"></ul>
+            </div>*@
         <div class="chat_container">
             <div id="contract_panel">
                 <div class="account_box">
@@ -201,20 +334,20 @@
                 <div class="tab_switch">
                     <ul id="tab_ul" class="clearfix">
                         <li onclick="selectTab(1,this)" class="selected_tab fl">
-                           正在聊天
+                            正在聊天
                             <span class="span_arrow">
-                               <i></i>
+                                <i></i>
                                 <em></em>
                             </span>
                         </li>
-                        <li onclick="selectTab(2,this)" class="fl"> 
-                           联系人
+                        <li onclick="selectTab(2,this)" class="fl">
+                            联系人
                         </li>
                         <li onclick="selectTab(3,this)" class="fl">
                             群聊
                         </li>
                     </ul>
-                  
+
                 </div>
                 <div id="tab_content">
                     <div id="tab1" class="tab_fragment">
@@ -265,159 +398,207 @@
                             </ul>
                         </div>
                     </div>
-                      <div id="tab2" style="display:none" class="tab_fragment">
-                          <div class="search_box">
-                              <a id="btn_search"><span class="fa fa-search"></span></a>
-                              <input type="text" placeholder="查找联系人" class="input_contract font_s_dark" />
-                          </div>
-                          <div class="contract_list_box">
-                              <ul class="contract_list_ul">
-                                  <li>
-                                      <div class="headimg">
-                                          <img src="~/Content/Images/headimg.jpg" class="round_img" />
-                                      </div>
-                                      <div class="cont">
-                                          <div class="cont_top clearfix cont_box">
-                                              <h6 class="name">科比布莱恩特</h6>                                              
-                                          </div>
-                                          <div class="cont_bottom cont_box">
-                                              <span class="font_s_dark">红米在线</span>
-                                          </div>
-                                      </div>
-                                  </li>
-                                  <li class="li_current">
-                                      <div class="headimg">
-                                          <img src="~/Content/Images/headimg.jpg" class="round_img" />
-                                      </div>
-                                      <div class="cont">
-                                          <div class="cont_top clearfix cont_box">
-                                              <h6 class="name">科比布莱恩特</h6>
-                                              <span class="time font_s_dark"><i class="fa fa-times"></i>14:58</span>
-                                          </div>
-                                          <div class="cont_bottom cont_box">
-                                              <span class="font_s_dark">火狐在线</span>
-                                          </div>
-                                      </div>
-                                  </li>
-                                  <li class="">
-                                      <div class="headimg">
-                                          <img src="~/Content/Images/headimg.jpg" class="round_img" />
-                                      </div>
-                                      <div class="cont">
-                                          <div class="cont_top clearfix cont_box">
-                                              <h6 class="name">科比布莱恩特</h6>
-                                              <span class="time font_s_dark"><i class="fa fa-times"></i>14:58</span>
-                                          </div>
-                                          <div class="cont_bottom cont_box">
-                                              <span class="font_s_dark">最新消息</span>
-                                          </div>
-                                      </div>
-                                  </li>
-                              </ul>
-                          </div>
-                      </div>
-                      <div id="tab3" style="display:none"  class="tab_fragment">
-                          <div class="search_box">
-                              <a id="btn_search"><span class="fa fa-search"></span></a>
-                              <input type="text" placeholder="查找群聊" class="input_contract font_s_dark" />
-                          </div>
+                    <div id="tab2" style="display:none" class="tab_fragment">
+                        <div class="search_box">
+                            <a id="btn_search"><span class="fa fa-search"></span></a>
+                            <input type="text" placeholder="查找联系人" class="input_contract font_s_dark" />
+                        </div>
+                        <div class="contract_list_box">
+                            <ul class="contract_list_ul">
+                                <li>
+                                    <div class="headimg">
+                                        <img src="~/Content/Images/headimg.jpg" class="round_img" />
+                                    </div>
+                                    <div class="cont">
+                                        <div class="cont_top clearfix cont_box">
+                                            <h6 class="name">科比布莱恩特</h6>
+                                        </div>
+                                        <div class="cont_bottom cont_box">
+                                            <span class="font_s_dark">红米在线</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="li_current">
+                                    <div class="headimg">
+                                        <img src="~/Content/Images/headimg.jpg" class="round_img" />
+                                    </div>
+                                    <div class="cont">
+                                        <div class="cont_top clearfix cont_box">
+                                            <h6 class="name">科比布莱恩特</h6>
+                                            <span class="time font_s_dark"><i class="fa fa-times"></i>14:58</span>
+                                        </div>
+                                        <div class="cont_bottom cont_box">
+                                            <span class="font_s_dark">火狐在线</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="headimg">
+                                        <img src="~/Content/Images/headimg.jpg" class="round_img" />
+                                    </div>
+                                    <div class="cont">
+                                        <div class="cont_top clearfix cont_box">
+                                            <h6 class="name">科比布莱恩特</h6>
+                                            <span class="time font_s_dark"><i class="fa fa-times"></i>14:58</span>
+                                        </div>
+                                        <div class="cont_bottom cont_box">
+                                            <span class="font_s_dark">最新消息</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="tab3" style="display:none" class="tab_fragment">
+                        <div class="search_box">
+                            <a id="btn_search"><span class="fa fa-search"></span></a>
+                            <input type="text" placeholder="查找群聊" class="input_contract font_s_dark" />
+                        </div>
                         <ul id="qun_list">
-                             <li class="font_cw"><h6  class="fl">sese群</h6>
-                               <span class="font_s_dark fr">20114545</span>
-                              </li>
-                            <li class="font_cw li_current"><h5 class="fl">sese群</h5>
+                            <li class="font_cw">
+                                <h6 class="fl">sese群</h6>
                                 <span class="font_s_dark fr">20114545</span>
                             </li>
-                            <li class="font_cw"><h5 class="fl">xamarin群</h5>
+                            <li class="font_cw li_current">
+                                <h5 class="fl">sese群</h5>
+                                <span class="font_s_dark fr">20114545</span>
+                            </li>
+                            <li class="font_cw">
+                                <h5 class="fl">xamarin群</h5>
                                 <span class="font_s_dark fr">20114545</span>
                             </li>
                         </ul>
-                      </div>
+                    </div>
+                </div>
+                <div id="operate_box">
+                    <ul>
+                        <li class="fl">
+                            <a href="javascript:void(0)" class="a_sound_open" alt="禁止声音" title="禁止声音"></a>
+                        </li>
+                        <li class="fl">
+                            <a href="javascript:void(0)" class="a_edit" alt="退出" title="退出"></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div id="chat_panel">
 
+            <div id="chat_panel">
+                <div id="chat_window">
+                    <div class="window_head">
+                        <img class="round_img fl" src="~/Content/Images/headimg.jpg" />
+                        <h5 class="fl">张林</h5>
+                    </div>
+                    <div class="window_msg">
+
+                    </div>
+                    <div class="window_edit">
+                        <div class="edit_type"><span class="font_s_dark">目前只支持文字</span> </div>
+                        <div class="edit_cont">
+                            <div id="edit_div" contenteditable="true" />
+                        </div>
+                        <div class="btn_box">
+                            <div class="fr position_re">
+                                <button id="send" class="h_opacity">
+                                    发送
+                                </button>
+                                <span id="send_arrow" class="fa fa-caret-down h_opacity"></span>
+                                <ul id="msg_info" style="display:none">
+                                    <li>在不?亲</li>
+                                    <li>任务ok了？</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
     <script src="~/Scripts/jquery-2.0.3.js"></script>
     <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
-    <script src="~/signalr/hubs"></script>  
+    <script src="~/signalr/hubs"></script>
     <script>
-    function getExplorerInfo() {
-        var explorer = window.navigator.userAgent.toLowerCase();
-        //ie
-        if (explorer.indexOf("msie") >= 0) {
-            var ver = explorer.match(/msie ([\d.]+)/)[1];
-            return { type: "IE", version: ver };
+        function getExplorerInfo() {
+            var explorer = window.navigator.userAgent.toLowerCase();
+            //ie
+            if (explorer.indexOf("msie") >= 0) {
+                var ver = explorer.match(/msie ([\d.]+)/)[1];
+                return { type: "IE", version: ver };
+            }
+                //firefox
+            else if (explorer.indexOf("firefox") >= 0) {
+                var ver = explorer.match(/firefox\/([\d.]+)/)[1];
+                return { type: "Firefox", version: ver };
+            }
+                //Chrome
+            else if (explorer.indexOf("chrome") >= 0) {
+                var ver = explorer.match(/chrome\/([\d.]+)/)[1];
+                return { type: "Chrome", version: ver };
+            }
+                //Opera
+            else if (explorer.indexOf("opera") >= 0) {
+                var ver = explorer.match(/opera.([\d.]+)/)[1];
+                return { type: "Opera", version: ver };
+            }
+                //Safari
+            else if (explorer.indexOf("Safari") >= 0) {
+                var ver = explorer.match(/version\/([\d.]+)/)[1];
+                return { type: "Safari", version: ver };
+            }
         }
-        //firefox
-        else if (explorer.indexOf("firefox") >= 0) {
-            var ver = explorer.match(/firefox\/([\d.]+)/)[1];
-            return { type: "Firefox", version: ver };
+        function selectTab(index, obj) {
+            var span_arrow = $("span.span_arrow");
+            var span_arrowObj = span_arrow.prop("outerHTML");
+            console.info(span_arrowObj);
+            span_arrow.remove();
+            $(obj).siblings().removeClass("selected_tab");
+            switch (index) {
+                case 1:
+                    $("#tab2,#tab3").hide();
+                    $("#tab1").show();
+                    $(obj).addClass("selected_tab").append(span_arrowObj);
+                    break;
+                case 2:
+                    $("#tab1,#tab3").hide();
+                    $("#tab2").show();
+                    $(obj).addClass("selected_tab").append(span_arrowObj);
+                    break;
+                case 3:
+                    $("#tab1,#tab2").hide();
+                    $("#tab3").show();
+                    $(obj).addClass("selected_tab").append(span_arrowObj);
+                    break;
+            }
         }
-        //Chrome
-        else if (explorer.indexOf("chrome") >= 0) {
-            var ver = explorer.match(/chrome\/([\d.]+)/)[1];
-            return { type: "Chrome", version: ver };
-        }
-        //Opera
-        else if (explorer.indexOf("opera") >= 0) {
-            var ver = explorer.match(/opera.([\d.]+)/)[1];
-            return { type: "Opera", version: ver };
-        }
-            //Safari
-        else if (explorer.indexOf("Safari") >= 0) {
-            var ver = explorer.match(/version\/([\d.]+)/)[1];
-            return { type: "Safari", version: ver };
-        }
-    }
-    function selectTab(index,obj)
-    {
-        var span_arrow = $("span.span_arrow");
-        var span_arrowObj = span_arrow.prop("outerHTML");
-        console.info(span_arrowObj);
-        span_arrow.remove();
-        $(obj).siblings().removeClass("selected_tab");
-        switch (index)
-        {
-            case 1:
-                $("#tab2,#tab3").hide();
-                $("#tab1").show();
-                $(obj).addClass("selected_tab").append(span_arrowObj);
-                break;
-            case 2:
-                $("#tab1,#tab3").hide();
-                $("#tab2").show();
-                $(obj).addClass("selected_tab").append(span_arrowObj);
-                break;
-            case 3:
-                $("#tab1,#tab2").hide();
-                $("#tab3").show();
-                $(obj).addClass("selected_tab").append(span_arrowObj);
-                break;
-        }
-        
-    }
-    $(function () {
-        //debugger
-        //引用生成的集线器代理
-        var chat = $.connection.serverHub;
-        //注册服务器端已经定义的客户端方法sendMessage来显示消息
-        chat.client.sendMessage = function (name,message)
-        {
-            //向页面添加消息
-            $("#messageBox").append('<li><strong style="color:green">' + name + '</strong>-' + message + '</li>');
-        }
-        //开始连接服务器
-        $.connection.hub.start().done(function (){
-            $("#sendMessage").click(function (){
-                //调用服务器中定义的方法
-                chat.server.sendMsg(getExplorerInfo().type,$("#message").val());
-                $("#message").val('').focus();
+        $(function () {
+            //debugger
+            //引用生成的集线器代理
+            var chat = $.connection.serverHub;
+            //注册服务器端已经定义的客户端方法sendMessage来显示消息
+            chat.client.sendMessage = function (name, message) {
+                //向页面添加消息
+                $("#messageBox").append('<li><strong style="color:green">' + name + '</strong>-' + message + '</li>');
+            }
+            //开始连接服务器
+            $.connection.hub.start().done(function () {
+                $("#sendMessage").click(function () {
+                    //调用服务器中定义的方法
+                    chat.server.sendMsg(getExplorerInfo().type, $("#message").val());
+                    $("#message").val('').focus();
+                });
             });
-        });
-    })
+
+            $("#send_arrow").click(function () {
+           
+                if ($("#msg_info").css("display")== "none") {
+                    $("ul#msg_info").show();
+                }
+                else {
+                    $("ul#msg_info").hide();
+                }
+            })
+        })
     </script>
 </body>
 </html>
