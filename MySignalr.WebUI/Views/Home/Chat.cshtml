@@ -256,6 +256,7 @@
             padding:5px;
             outline-style:none;
           height:110px;
+        font-size:12px;
         }
         #chat_window .btn_box {
           background-color:#f1f1f1;
@@ -313,6 +314,90 @@
                 background-color:#2f9833;
                 color:#fff;
                 }
+        /*chat window end*/
+        #chat_window .window_msg .msg_list .msg_item_cont .item_top_user {
+          height:35px;
+        margin-left:20px;
+        }
+        p.msg_item_time {
+         height:25px;line-height:25px;text-align:center;
+        }
+        #chat_window .window_msg .msg_list .msg_item_cont .item_top_user image{
+          margin-right:10px;
+        }
+        .msg_item {
+        margin-bottom:10px;
+        }
+        #chat_window .window_msg .msg_list .msg_item_cont .item_bottom_cont .cont_main{
+      
+        }
+        #chat_window .window_msg .msg_list .msg_item_cont .item_bottom_cont{
+        margin-top:15px;
+        margin-left:25px;
+        display:inline-block;
+        }
+        #chat_window .window_msg .msg_list .msg_item_cont .cont_arrow {
+          position:absolute;
+          top:-17px;
+        }
+        .a_left {
+          left:5px;
+        }
+         .a_right {
+          right:5px;
+        }
+        #chat_window .window_msg .msg_list .msg_item_cont .cont_container{
+            position:relative; 
+        display:inline-block;
+          max-width:450px;
+        background-color:#dedede;
+          box-shadow:0 2px 2px #808080;
+        border-radius:3px;
+        }
+        .cont_container p {
+        padding:6px;
+        line-height: 21px;
+    word-wrap: break-word;
+        }
+        .cont_arrow i {
+         border-width:5px;
+        border-color:#dedede;
+        display:inline-block;
+        border-style:solid;
+        border-top-color:transparent;
+        border-right-color:transparent;
+        border-left-color:transparent;
+        }
+        .msg_fr {
+          float:right;
+        }
+       .msg_fr .item_top_user > img {
+        float:right;
+          margin-left:5px;
+        }
+        .msg_fr .item_top_user {
+          margin-left:0px;
+        margin-right:20px; 
+        }
+        .a_right > i {
+        border-bottom-color:#2f9833;
+        }
+        .msg_fr .item_bottom_cont {
+        float:right;  
+        margin-right:25px;  
+        }
+        .msg_fr .cont_main {
+           background-color:#2f9833;
+        color:#fff;
+        }
+        .vg_m {
+        vertical-align:middle;
+        }
+        .font_s_black {
+          color:#808080;
+          font-size:12px;
+        }
+        /*chat window start*/
     </style>
 </head>
 <body>
@@ -489,7 +574,46 @@
                         <h5 class="fl">张林</h5>
                     </div>
                     <div class="window_msg">
-
+                        <div class="msg_list">
+                            <div class="msg_item">
+                                <p class="msg_item_time font_s_black">22:42</p>
+                                <div class="msg_item_cont">
+                                    <div class="item_top_user">
+                                        <img  class="round_img vg_m" src="~/Content/Images/headimg.jpg"/>
+                                        <span class="font_s_black vg_m">张木木csdn</span>
+                                    </div>
+                                    <div class="item_bottom_cont">
+                                        <div class="cont_container">
+                                            <div class="cont_arrow a_left">
+                                                <i></i>
+                                            </div>
+                                            <div class="cont_main">
+                                                <p>ceshi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="msg_item">
+                                <p class="msg_item_time font_s_black">22:42</p>
+                                <div class="msg_item_cont msg_fr">
+                                    <div class="item_top_user">
+                                        <img class="round_img vg_m" src="~/Content/Images/headimg.jpg" />
+                                        <span class="font_s_black vg_m">张木木csdn</span>
+                                    </div>
+                                    <div class="item_bottom_cont">
+                                        <div class="cont_container">
+                                            <div class="cont_arrow a_right">
+                                                <i></i>
+                                            </div>
+                                            <div class="cont_main">
+                                                <p>ceshi</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="window_edit">
                         <div class="edit_type"><span class="font_s_dark">目前只支持文字</span> </div>
@@ -602,4 +726,6 @@
     </script>
 </body>
 </html>
+
+
 
