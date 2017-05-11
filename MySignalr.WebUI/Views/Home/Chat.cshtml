@@ -241,10 +241,10 @@
         height:450px;
         border-bottom:1px solid #f0f0f0;
         }
-       #chat_window .window_edit {
+       /*#chat_window .window_edit {
         border-bottom:1px solid #ff0000;
         /*overflow:hidden;*/
-        }
+        
         #chat_window .edit_type {
           height:30px;
           background-color:#f1f1f1;
@@ -317,7 +317,8 @@
         /*chat window end*/
         #chat_window .window_msg .msg_list .msg_item_cont .item_top_user {
           height:35px;
-        margin-left:20px;
+          margin-left:20px;
+          display:inline-block;
         }
         p.msg_item_time {
          height:25px;line-height:25px;text-align:center;
@@ -354,6 +355,9 @@
           box-shadow:0 2px 2px #808080;
         border-radius:3px;
         }
+        .cont_container .cont_main {
+          border-radius:3px;
+        }
         .cont_container p {
         padding:6px;
         line-height: 21px;
@@ -378,6 +382,7 @@
         .msg_fr .item_top_user {
           margin-left:0px;
         margin-right:20px; 
+        float:right;
         }
         .a_right > i {
         border-bottom-color:#2f9833;
@@ -574,40 +579,71 @@
                         <h5 class="fl">张林</h5>
                     </div>
                     <div class="window_msg">
-                        <div class="msg_list">
+                        <div class="msg_list" id="msg_list">
                             <div class="msg_item">
                                 <p class="msg_item_time font_s_black">22:42</p>
                                 <div class="msg_item_cont">
-                                    <div class="item_top_user">
-                                        <img  class="round_img vg_m" src="~/Content/Images/headimg.jpg"/>
-                                        <span class="font_s_black vg_m">张木木csdn</span>
-                                    </div>
-                                    <div class="item_bottom_cont">
-                                        <div class="cont_container">
-                                            <div class="cont_arrow a_left">
-                                                <i></i>
+                                    <div class="item_top_box clearfix">
+                                        <div class="item_top_user">
+                                            <img class="round_img vg_m" src="~/Content/Images/headimg.jpg" />
+                                            <span class="font_s_black vg_m">张木木csdn</span>
+                                        </div>
+                                      </div>
+                                    <div class="item_bottom_box">
+                                        <div class="item_bottom_cont">
+                                            <div class="cont_container">
+                                                <div class="cont_arrow a_left">
+                                                    <i></i>
+                                                </div>
+                                                <div class="cont_main">
+                                                    <p>ceshi</p>
+                                                </div>
                                             </div>
-                                            <div class="cont_main">
-                                                <p>ceshi</p>
+                                        </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="msg_item">
+                                <div class="clearfix">
+                                    <p class="msg_item_time font_s_black">22:42</p>
+                                    <div class="msg_item_cont msg_fr">
+                                        <div class="item_top_user">
+                                            <img class="round_img vg_m" src="~/Content/Images/headimg.jpg" />
+                                            <span class="font_s_black vg_m">张木木csdn</span>
+                                        </div>
+                                        <div class="item_bottom_cont">
+                                            <div class="cont_container">
+                                                <div class="cont_arrow a_right">
+                                                    <i></i>
+                                                </div>
+                                                <div class="cont_main">
+                                                    <p>ceshi</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="msg_item">
-                                <p class="msg_item_time font_s_black">22:42</p>
-                                <div class="msg_item_cont msg_fr">
-                                    <div class="item_top_user">
-                                        <img class="round_img vg_m" src="~/Content/Images/headimg.jpg" />
-                                        <span class="font_s_black vg_m">张木木csdn</span>
-                                    </div>
-                                    <div class="item_bottom_cont">
-                                        <div class="cont_container">
-                                            <div class="cont_arrow a_right">
-                                                <i></i>
+                                <div class="clearfix">
+                                    <p class="msg_item_time font_s_black">22:42</p>
+                                    <div class="msg_item_cont msg_fr clearfix">
+                                        <div class="item_top_box clearfix">
+                                            <div class="item_top_user">
+                                                <img class="round_img vg_m" src="~/Content/Images/headimg.jpg" />
+                                                <span class="font_s_black vg_m">张木木csdn</span>
                                             </div>
-                                            <div class="cont_main">
-                                                <p>ceshi</p>
+                                        </div>
+                                        <div class="item_bottom_box clearfix">
+                                            <div class="item_bottom_cont">
+                                                <div class="cont_container">
+                                                    <div class="cont_arrow a_right">
+                                                        <i></i>
+                                                    </div>
+                                                    <div class="cont_main">
+                                                        <p>ceshi</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -702,19 +738,32 @@
             //注册服务器端已经定义的客户端方法sendMessage来显示消息
             chat.client.sendMessage = function (name, message) {
                 //向页面添加消息
-                $("#messageBox").append('<li><strong style="color:green">' + name + '</strong>-' + message + '</li>');
+                var msg_item = '<div class="msg_item">'+
+                                '<div class="clearfix">'+
+                                    '<p class="msg_item_time font_s_black">22:42</p>'+
+                                    '<div class="msg_item_cont msg_fr">'+
+                                        ' <div class="item_top_box clearfix"></div><div class="item_top_user">' +
+                                            '<img class="round_img vg_m" src="/Content/Images/headimg.jpg" />'+
+                                             '<span class="font_s_black vg_m">'+name+'</span></div>'+
+                                        ' <div class="item_bottom_box clearfix"><div class="item_bottom_cont">' +
+                                            '<div class="cont_container">'+
+                                                '<div class="cont_arrow a_right"><i></i></div>'+
+                                                '<div class="cont_main">'+
+                                                    '<p>'+message+'</p></div></div></div></div></div></div></div>';
+                $("#msg_list").append(msg_item);
             }
+
             //开始连接服务器
             $.connection.hub.start().done(function () {
-                $("#sendMessage").click(function () {
+                $("#send").click(function ()
+                {
                     //调用服务器中定义的方法
-                    chat.server.sendMsg(getExplorerInfo().type, $("#message").val());
-                    $("#message").val('').focus();
+                    chat.server.sendMsg(getExplorerInfo().type, $("#edit_div").text());
+                    $("#edit_div").val('').focus();
                 });
             });
 
             $("#send_arrow").click(function () {
-           
                 if ($("#msg_info").css("display")== "none") {
                     $("ul#msg_info").show();
                 }
