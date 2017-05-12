@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Threading;
 namespace MySignalr.WebUI.Controllers
 {
     public class HomeController : Controller
@@ -14,6 +14,9 @@ namespace MySignalr.WebUI.Controllers
         }
         public ActionResult Chat()
         {
+            int threadId = Thread.CurrentThread.ManagedThreadId;
+            Response.Write("chat页面线程ID"+ threadId);
+            Response.Write("用户登录页面cache设置的test的值"+HttpContext.Cache["test"]+HttpCurrent.Context.Cache["test"]);
             return View();
         }
 

@@ -1,0 +1,213 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>登录</title>
+    <meta charset="utf-8" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/Content/Image/title-monitor.ico" />
+    <style type="text/css">
+        html, body {
+        height:100%;
+        }
+        #bg_container{
+            width: 100%;
+            height:100%;
+            display:table;
+            background:url('../../Content/Images/login-bg.jpg') no-repeat bottom center;
+            background-color:#000;
+            color:#fff;
+        }
+
+        .p-input {
+            border: 1px solid #dedede;
+            border-radius: 2px;
+            display: inline-block;
+        }
+
+            .p-input input {
+                border: none;
+                box-shadow: none;
+                /*border: 1px solid #CFCFCF;*/
+                background-color: #fff;
+                vertical-align: middle;
+                padding: 8px 8px;
+                line-height: 1.5;
+                font-size: 14px;
+                outline: 0;
+                height: auto;
+                width: 284px;
+            }
+
+            .p-input span.glyphicon {
+                margin-left: 10px;
+               
+            }
+
+        .loginBox form {
+            display: inline-block;
+             color:#333;
+        }
+
+        .loginBox {
+            text-align: center;
+        }
+
+            .loginBox .formContent {
+                padding: 20px 20px 10px 20px;
+                background: #ffffff;
+                border-radius:5px;
+                border: 1px solid #fbfbfb;
+                /*box-shadow:3px 3px 3px 3px #dedede;*/
+                box-shadow: 0 2px 16px #808080, 0 0 1px #808080, 0 0 1px #808080;
+            }
+
+        .loginBox .formContent > h4{
+                    text-align: left;
+        }
+        .container {
+           margin-top:50px;
+        }
+
+        p.p-btn {
+            border: none;
+            text-align: right;
+            display: block;
+            min-width: 315px;
+        }
+
+        blockquote {
+            border-left: 5px solid #00aeef;
+        }
+
+        .alert {
+            margin: 0px;
+        }
+
+        ul {
+            margin: 0px;
+        }
+
+            ul li {
+                list-style: none;
+            }
+
+        div.alert p#alertInfo {
+            display: inline-block;
+        }
+
+        .btn-custom {
+            color: #fff !important;
+            background-color: #2f9833;
+            border-color: #2f9000;
+        }
+
+            .btn-custom:hover {
+                background-color: #2f9000;
+            }
+    </style>
+</head>
+<body>
+    <div id="bg_container">
+        <div class="container">
+            <h1>使用 signalr</h1>
+            <blockquote>
+                <p>
+                    功能有限
+                </p>
+                <small>by 张林博客<a href="http://blog.csdn.net/kebi007">http://blog.csdn.net/kebi007</a></small>
+            </blockquote>
+        </div>
+        <div class="alert alert-danger navbar-fixed-bottom aler-custom" style="display:none">
+            <p id="alertInfo"></p>
+            <button class="close" aria-hidden="true">&times;</button>
+        </div>
+        <div class="loginBox container">
+            <form id="formLogin" method="post" action="/Account/Login">
+                <div class="formContent">
+                    <h4>登录</h4>
+                    <div class="">
+                        <p class="p-input">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <input type="text" class="" id="userName" name="account" placeholder="请输入账号" />
+                        </p>
+                    </div>
+                    <div class="">
+                        <p class="p-input">
+                            <span class="glyphicon glyphicon-lock"></span>
+                            <input type="password" class="" id="pwd" name="pwd" placeholder="密码" />
+                        </p>
+                    </div>
+
+                    <div class="">
+                        <p class="p-input p-btn">
+                            <button href="#" class="btn btn-custom" id="btnLogin" type="submit" onclick="onLogin()">登录</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/Scripts/jquery-2.0.3.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script type="text/javascript">
+    function getCookie(cookieName) {//获取指定名称的cookie的值
+        var arrstr = document.cookie.split("; ");
+        for (var i = 0; i < arrstr.length; i++) {
+            var temp = arrstr[i].split("=");
+            if (temp[0] == cookieName) return unescape(temp[1]);
+        }
+    }
+    function checkInput(inputObj, alertMsg) {
+        if ($(inputObj).val().trim() == "") {
+            $("div.alert-danger").show();
+            $("p#alertInfo").text("").text(alertMsg);
+            return false;
+        }
+        return true;
+    }
+    function onkeyDown() {
+        $(document).keydown(function (event) {
+            console.info(event.keyCode);
+            if (event.keyCode == '13') {
+                $("a#btnLogin").click();
+            }
+        });
+    }
+    function onLogin() {
+        if (!checkInput("#userName", "请输入账号") || !checkInput("#pwd", "请输入密码")) {
+            return;
+        }
+        $.ajax({
+            url: "@Url.Action("Login","Account")",
+            data: $("#formLogin").serialize(),
+            dataType: 'json',
+            type: 'post',
+            success: function (data) {
+                if (data.state == "success") {
+                    window.location = "../Web/WebManager";
+                }
+                else {
+                    $("div.alert-danger").show();
+                    $("p#alertInfo").text("").text(data.message);
+                }
+            },
+            error: function () {
+                $("p#alertInfo").text("").text("提交登录失败");
+            }
+        })
+    }
+    $(function () {
+        onkeyDown();
+        //$(".alert-danger").hide();
+        $("input#userName").val(getCookie("userName"));
+        $("button.close").click(function () {
+            $(".alert-danger").hide();
+        })
+    })
+</script>

@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accessDb.cs" />
     <Compile Include="DbModels\Database11.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +73,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ApiResult.cs" />
+    <Compile Include="ViewModel\LoginedUser.cs" />
     <Compile Include="ViewModel\UserInfo.cs" />
   </ItemGroup>
   <ItemGroup>

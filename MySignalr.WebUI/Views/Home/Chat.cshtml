@@ -240,6 +240,7 @@
         #chat_window .window_msg {
         height:450px;
         border-bottom:1px solid #f0f0f0;
+        overflow:auto;
         }
        /*#chat_window .window_edit {
         border-bottom:1px solid #ff0000;
@@ -667,7 +668,6 @@
                                     <li>任务ok了？</li>
                                 </ul>
                             </div>
-
                         </div>
                     </div>
 
@@ -731,7 +731,8 @@
                     break;
             }
         }
-        $(function () {
+        $(function ()
+        {
             //debugger
             //引用生成的集线器代理
             var chat = $.connection.serverHub;
@@ -759,7 +760,7 @@
                 {
                     //调用服务器中定义的方法
                     chat.server.sendMsg(getExplorerInfo().type, $("#edit_div").text());
-                    $("#edit_div").val('').focus();
+                    $("#edit_div").text('').focus();
                 });
             });
 
